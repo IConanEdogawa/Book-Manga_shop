@@ -24,12 +24,11 @@
 
 // script.js
 function viewProduct(productUrl) {
-    window.location.href = productUrl; // Redirect to the product page
+    window.location.href = productUrl; 
   }
   
   // script.js
 document.addEventListener("DOMContentLoaded", function () {
-    // Function to generate product card
     function generateProductCard(title, author, price, imageUrl) {
       const productContainer = document.getElementById("product-cards");
   
@@ -46,33 +45,27 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
       `;
   
-      // Add click event to view product details
       cardDiv.addEventListener("click", function () {
-        window.location.href = "product.html"; // Redirect to the product page
+        window.location.href = "product.html"; 
       });
   
       productContainer.appendChild(cardDiv);
     }
   
-    // Example product data (you can fetch this from an API)
     const products = [
       { title: "Manga Title 1", author: "Author Name 1", price: "$19.99", imageUrl: "https://i.pinimg.com/564x/37/6f/c1/376fc1cd4a32c1750c9e853f4ee9c38c.jpg" },
       { title: "Manga Title 2", author: "Author Name 2", price: "$24.99", imageUrl: "https://i.pinimg.com/564x/71/5c/07/715c07b54901446813ba1b69a2994a99.jpg" },
       { title: "Manga Title 3", author: "Author Name 3", price: "$29.99", imageUrl: "https://i.pinimg.com/564x/11/d0/6f/11d06ff893e7e126482c083a674921f1.jpg" },
-      // Add more product data as needed
     ];
   
-    // Generate product cards
     products.forEach(product => {
       generateProductCard(product.title, product.author, product.price, product.imageUrl);
     });
   
-    // Add click event to author links
     const authorLinks = document.querySelectorAll(".author-link");
     authorLinks.forEach(link => {
       link.addEventListener("click", function (event) {
-        event.stopPropagation(); // Prevent card click event from triggering
-        // You can handle author link clicks here
+        event.stopPropagation(); 
         alert("Author link clicked: " + link.textContent);
       });
     });
