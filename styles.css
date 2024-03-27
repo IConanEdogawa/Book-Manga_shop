@@ -48,10 +48,17 @@ body {
   } */
   
   .social-icon-footer i {
-    font-size: 1.5rem; 
+    font-size: 0.5rem; 
   }
   
   .social-icon-footer img {
-    width: 100%; 
+    width: 50%; 
   }
+
+.cont-ic{
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  padding: 10px;
+}
   
